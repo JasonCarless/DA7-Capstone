@@ -50,3 +50,36 @@ order by date;
 71.7083333333333333	"2019-03-17"
 72.7467532467532468	"2021-03-14"
 72.9440559440559441	"2022-03-13" */
+
+select avg(strokes/n_rounds), golf.date, tournament_name, "AWND", "TMAX", "TMIN", "WSF5"
+from golf
+inner join ohio
+on golf.date = ohio."DATE"
+where tournament_name like '%Memorial%'
+group by date, tournament_name, "AWND", "TMAX", "TMIN", "WSF5"
+order by "AWND" desc;
+
+
+select avg(strokes/n_rounds), golf.date, tournament_name, "AWND", "TMAX", "TMIN", "WSF5"
+from golf
+inner join georgia
+on golf.date = georgia."DATE"
+where tournament_name like '%Masters%'
+group by date, tournament_name, "AWND", "TMAX", "TMIN", "WSF5"
+order by "AWND" desc;
+
+with wind as (select "AWND", "DATE",
+                 avg("AWND") OVER(ORDER by "DATE" Rows between 3 preceding and current row)
+                 as average_wind
+                 from ohio)
+                 
+    select avg(strokes/n_rounds), golf.date, average_wind, tournament_name
+    from golf
+    inner join wind 
+    on golf.date = wind."DATE"
+    where tournament_name like '%Memorial%'
+    group by golf.date, tournament_name, average_wind
+    order by average_wind desc;
+    
+      
+                    
