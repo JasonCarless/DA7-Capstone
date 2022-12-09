@@ -71,15 +71,69 @@ order by "AWND" desc;
 with wind as (select "AWND", "DATE",
                  avg("AWND") OVER(ORDER by "DATE" Rows between 3 preceding and current row)
                  as average_wind
+                 from ohio),
+             
+     max_temp as (select "TMAX", "DATE",
+                 avg("TMAX") OVER(ORDER by "DATE" Rows between 3 preceding and current row)
+                 as average_max
+                 from ohio),
+               
+     min_temp as (select "TMIN", "DATE",
+                 avg("TMIN") OVER(ORDER by "DATE" Rows between 3 preceding and current row)
+                 as average_min
+                 from ohio),
+                 
+     gusts as (select "WSF5", "DATE",
+                 avg("WSF5") OVER(ORDER by "DATE" Rows between 3 preceding and current row)
+                 as average_gust
                  from ohio)
                  
-    select avg(strokes/n_rounds), golf.date, average_wind, tournament_name
+    select avg(strokes/n_rounds), golf.date, round(average_wind,2)as wind, round(average_max,2) as max, round(average_min,2) as min, round(average_gust,2)as gust, tournament_name
     from golf
     inner join wind 
     on golf.date = wind."DATE"
+    inner join max_temp
+    on golf.date = max_temp."DATE"
+    inner join min_temp 
+    on golf.date = min_temp."DATE"
+    inner join gusts 
+    on golf.date = gusts."DATE"
     where tournament_name like '%Memorial%'
-    group by golf.date, tournament_name, average_wind
-    order by average_wind desc;
-    
+    group by golf.date, tournament_name, wind, max, min, gust
+    order by wind desc;
       
+      
+with wind as (select "AWND", "DATE",
+                 avg("AWND") OVER(ORDER by "DATE" Rows between 3 preceding and current row)
+                 as average_wind
+                 from georgia),
+             
+     max_temp as (select "TMAX", "DATE",
+                 avg("TMAX") OVER(ORDER by "DATE" Rows between 3 preceding and current row)
+                 as average_max
+                 from georgia),
+               
+     min_temp as (select "TMIN", "DATE",
+                 avg("TMIN") OVER(ORDER by "DATE" Rows between 3 preceding and current row)
+                 as average_min
+                 from georgia),
+                 
+     gusts as (select "WSF5", "DATE",
+                 avg("WSF5") OVER(ORDER by "DATE" Rows between 3 preceding and current row)
+                 as average_gust
+                 from georgia)
+                 
+    select avg(strokes/n_rounds), golf.date, round(average_wind,2)as wind, round(average_max,2) as max, round(average_min,2) as min, round(average_gust,2)as gust, tournament_name
+    from golf
+    inner join wind 
+    on golf.date = wind."DATE"
+    inner join max_temp
+    on golf.date = max_temp."DATE"
+    inner join min_temp 
+    on golf.date = min_temp."DATE"
+    inner join gusts 
+    on golf.date = gusts."DATE"
+    where tournament_name like '%Masters%'
+    group by golf.date, tournament_name, wind, max, min, gust
+    order by wind desc;
                     
