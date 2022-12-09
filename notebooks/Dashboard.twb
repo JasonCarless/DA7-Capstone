@@ -1,0 +1,1005 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20222.22.0812.0353                               -->
+<workbook original-version='18.1' source-build='2022.2.1 (20222.22.0812.0353)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='golf+ (capstone)' inline='true' name='federated.1yd3a9z0h24e541dfstp81mtdimy' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='localhost' name='postgres.0pq02o118wgtna1begk3p0rdh0s7'>
+            <connection authentication='username-password' class='postgres' dbname='capstone' one-time-sql='' port='5432' server='localhost' username='postgres' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='postgres.0pq02o118wgtna1begk3p0rdh0s7' name='florida' table='[public].[florida]' type='table' />
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='postgres.0pq02o118wgtna1begk3p0rdh0s7' name='golf' table='[public].[golf]' type='table' />
+          <relation connection='postgres.0pq02o118wgtna1begk3p0rdh0s7' name='florida' table='[public].[florida]' type='table' />
+          <relation connection='postgres.0pq02o118wgtna1begk3p0rdh0s7' name='georgia' table='[public].[georgia]' type='table' />
+          <relation connection='postgres.0pq02o118wgtna1begk3p0rdh0s7' name='ohio' table='[public].[ohio]' type='table' />
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[AWND (ohio)]' value='[ohio].[AWND]' />
+          <map key='[AWND]' value='[georgia].[AWND]' />
+          <map key='[DATE (florida)]' value='[florida].[DATE]' />
+          <map key='[DATE (ohio)]' value='[ohio].[DATE]' />
+          <map key='[DATE]' value='[georgia].[DATE]' />
+          <map key='[Finish]' value='[golf].[Finish]' />
+          <map key='[NAME (florida)]' value='[florida].[NAME]' />
+          <map key='[NAME (ohio)]' value='[ohio].[NAME]' />
+          <map key='[NAME]' value='[georgia].[NAME]' />
+          <map key='[PRCP (florida)]' value='[florida].[PRCP]' />
+          <map key='[PRCP (ohio)]' value='[ohio].[PRCP]' />
+          <map key='[PRCP]' value='[georgia].[PRCP]' />
+          <map key='[TMAX (florida)]' value='[florida].[TMAX]' />
+          <map key='[TMAX (ohio)]' value='[ohio].[TMAX]' />
+          <map key='[TMAX]' value='[georgia].[TMAX]' />
+          <map key='[TMIN (florida)]' value='[florida].[TMIN]' />
+          <map key='[TMIN (ohio)]' value='[ohio].[TMIN]' />
+          <map key='[TMIN]' value='[georgia].[TMIN]' />
+          <map key='[WSF2 (ohio)]' value='[ohio].[WSF2]' />
+          <map key='[WSF2]' value='[georgia].[WSF2]' />
+          <map key='[WSF5 (ohio)]' value='[ohio].[WSF5]' />
+          <map key='[WSF5]' value='[georgia].[WSF5]' />
+          <map key='[date]' value='[golf].[date]' />
+          <map key='[hole_par]' value='[golf].[hole_par]' />
+          <map key='[made_cut]' value='[golf].[made_cut]' />
+          <map key='[n_rounds]' value='[golf].[n_rounds]' />
+          <map key='[player]' value='[golf].[player]' />
+          <map key='[pos]' value='[golf].[pos]' />
+          <map key='[season]' value='[golf].[season]' />
+          <map key='[sg_app]' value='[golf].[sg_app]' />
+          <map key='[sg_arg]' value='[golf].[sg_arg]' />
+          <map key='[sg_ott]' value='[golf].[sg_ott]' />
+          <map key='[sg_putt]' value='[golf].[sg_putt]' />
+          <map key='[sg_t2g]' value='[golf].[sg_t2g]' />
+          <map key='[sg_total]' value='[golf].[sg_total]' />
+          <map key='[strokes]' value='[golf].[strokes]' />
+          <map key='[tournament_name]' value='[golf].[tournament_name]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>player</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[player]</local-name>
+            <parent-name>[golf]</parent-name>
+            <remote-alias>player</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[golf_631CB0DEAE1D4BA683C1F96807D42D9E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>hole_par</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[hole_par]</local-name>
+            <parent-name>[golf]</parent-name>
+            <remote-alias>hole_par</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[golf_631CB0DEAE1D4BA683C1F96807D42D9E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>strokes</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[strokes]</local-name>
+            <parent-name>[golf]</parent-name>
+            <remote-alias>strokes</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[golf_631CB0DEAE1D4BA683C1F96807D42D9E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>n_rounds</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[n_rounds]</local-name>
+            <parent-name>[golf]</parent-name>
+            <remote-alias>n_rounds</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[golf_631CB0DEAE1D4BA683C1F96807D42D9E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>made_cut</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[made_cut]</local-name>
+            <parent-name>[golf]</parent-name>
+            <remote-alias>made_cut</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[golf_631CB0DEAE1D4BA683C1F96807D42D9E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pos</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[pos]</local-name>
+            <parent-name>[golf]</parent-name>
+            <remote-alias>pos</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[golf_631CB0DEAE1D4BA683C1F96807D42D9E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tournament_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[tournament_name]</local-name>
+            <parent-name>[golf]</parent-name>
+            <remote-alias>tournament_name</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[golf_631CB0DEAE1D4BA683C1F96807D42D9E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[date]</local-name>
+            <parent-name>[golf]</parent-name>
+            <remote-alias>date</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[golf_631CB0DEAE1D4BA683C1F96807D42D9E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>season</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[season]</local-name>
+            <parent-name>[golf]</parent-name>
+            <remote-alias>season</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[golf_631CB0DEAE1D4BA683C1F96807D42D9E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Finish</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Finish]</local-name>
+            <parent-name>[golf]</parent-name>
+            <remote-alias>Finish</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[golf_631CB0DEAE1D4BA683C1F96807D42D9E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sg_putt</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[sg_putt]</local-name>
+            <parent-name>[golf]</parent-name>
+            <remote-alias>sg_putt</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[golf_631CB0DEAE1D4BA683C1F96807D42D9E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sg_arg</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[sg_arg]</local-name>
+            <parent-name>[golf]</parent-name>
+            <remote-alias>sg_arg</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[golf_631CB0DEAE1D4BA683C1F96807D42D9E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sg_app</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[sg_app]</local-name>
+            <parent-name>[golf]</parent-name>
+            <remote-alias>sg_app</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[golf_631CB0DEAE1D4BA683C1F96807D42D9E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sg_ott</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[sg_ott]</local-name>
+            <parent-name>[golf]</parent-name>
+            <remote-alias>sg_ott</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[golf_631CB0DEAE1D4BA683C1F96807D42D9E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sg_t2g</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[sg_t2g]</local-name>
+            <parent-name>[golf]</parent-name>
+            <remote-alias>sg_t2g</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[golf_631CB0DEAE1D4BA683C1F96807D42D9E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sg_total</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[sg_total]</local-name>
+            <parent-name>[golf]</parent-name>
+            <remote-alias>sg_total</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[golf_631CB0DEAE1D4BA683C1F96807D42D9E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NAME</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[NAME (florida)]</local-name>
+            <parent-name>[florida]</parent-name>
+            <remote-alias>NAME</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[florida_A1BD9891F6974AC3B1A87CA8499CB54E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DATE</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[DATE (florida)]</local-name>
+            <parent-name>[florida]</parent-name>
+            <remote-alias>DATE</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[florida_A1BD9891F6974AC3B1A87CA8499CB54E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PRCP</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[PRCP (florida)]</local-name>
+            <parent-name>[florida]</parent-name>
+            <remote-alias>PRCP</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[florida_A1BD9891F6974AC3B1A87CA8499CB54E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TMAX</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[TMAX (florida)]</local-name>
+            <parent-name>[florida]</parent-name>
+            <remote-alias>TMAX</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[florida_A1BD9891F6974AC3B1A87CA8499CB54E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TMIN</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[TMIN (florida)]</local-name>
+            <parent-name>[florida]</parent-name>
+            <remote-alias>TMIN</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[florida_A1BD9891F6974AC3B1A87CA8499CB54E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NAME</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[NAME]</local-name>
+            <parent-name>[georgia]</parent-name>
+            <remote-alias>NAME</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[georgia_2ACE5A2842ED48DABDF396297CACD9BD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DATE</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[DATE]</local-name>
+            <parent-name>[georgia]</parent-name>
+            <remote-alias>DATE</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[georgia_2ACE5A2842ED48DABDF396297CACD9BD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AWND</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[AWND]</local-name>
+            <parent-name>[georgia]</parent-name>
+            <remote-alias>AWND</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[georgia_2ACE5A2842ED48DABDF396297CACD9BD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PRCP</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[PRCP]</local-name>
+            <parent-name>[georgia]</parent-name>
+            <remote-alias>PRCP</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[georgia_2ACE5A2842ED48DABDF396297CACD9BD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TMAX</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[TMAX]</local-name>
+            <parent-name>[georgia]</parent-name>
+            <remote-alias>TMAX</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[georgia_2ACE5A2842ED48DABDF396297CACD9BD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TMIN</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[TMIN]</local-name>
+            <parent-name>[georgia]</parent-name>
+            <remote-alias>TMIN</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[georgia_2ACE5A2842ED48DABDF396297CACD9BD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>WSF2</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[WSF2]</local-name>
+            <parent-name>[georgia]</parent-name>
+            <remote-alias>WSF2</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[georgia_2ACE5A2842ED48DABDF396297CACD9BD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>WSF5</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[WSF5]</local-name>
+            <parent-name>[georgia]</parent-name>
+            <remote-alias>WSF5</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[georgia_2ACE5A2842ED48DABDF396297CACD9BD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NAME</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[NAME (ohio)]</local-name>
+            <parent-name>[ohio]</parent-name>
+            <remote-alias>NAME</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[ohio_FE302CA7C21C40E3B89DA73232E77855]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DATE</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[DATE (ohio)]</local-name>
+            <parent-name>[ohio]</parent-name>
+            <remote-alias>DATE</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[ohio_FE302CA7C21C40E3B89DA73232E77855]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AWND</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[AWND (ohio)]</local-name>
+            <parent-name>[ohio]</parent-name>
+            <remote-alias>AWND</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[ohio_FE302CA7C21C40E3B89DA73232E77855]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PRCP</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[PRCP (ohio)]</local-name>
+            <parent-name>[ohio]</parent-name>
+            <remote-alias>PRCP</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[ohio_FE302CA7C21C40E3B89DA73232E77855]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TMAX</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[TMAX (ohio)]</local-name>
+            <parent-name>[ohio]</parent-name>
+            <remote-alias>TMAX</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[ohio_FE302CA7C21C40E3B89DA73232E77855]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TMIN</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[TMIN (ohio)]</local-name>
+            <parent-name>[ohio]</parent-name>
+            <remote-alias>TMIN</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[ohio_FE302CA7C21C40E3B89DA73232E77855]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>WSF2</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[WSF2 (ohio)]</local-name>
+            <parent-name>[ohio]</parent-name>
+            <remote-alias>WSF2</remote-alias>
+            <ordinal>39</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[ohio_FE302CA7C21C40E3B89DA73232E77855]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>WSF5</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[WSF5 (ohio)]</local-name>
+            <parent-name>[ohio]</parent-name>
+            <remote-alias>WSF5</remote-alias>
+            <ordinal>40</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[ohio_FE302CA7C21C40E3B89DA73232E77855]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Awnd' datatype='real' name='[AWND]' role='measure' type='quantitative' />
+      <column caption='strokes per round' datatype='real' name='[Calculation_1407093447929278465]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='AVG([strokes])/ AVG([n_rounds])' />
+      </column>
+      <column caption='DATE(georgia)' datatype='date' name='[DATE]' role='dimension' type='ordinal' />
+      <column caption='Name' datatype='string' name='[NAME]' role='dimension' type='nominal' />
+      <column caption='Prcp' datatype='real' name='[PRCP]' role='measure' type='quantitative' />
+      <column caption='Tmax' datatype='integer' name='[TMAX]' role='measure' type='quantitative' />
+      <column caption='Tmin' datatype='integer' name='[TMIN]' role='measure' type='quantitative' />
+      <column caption='Wsf2' datatype='real' name='[WSF2]' role='measure' type='quantitative' />
+      <column caption='Wsf5' datatype='real' name='[WSF5]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='florida' datatype='table' name='[__tableau_internal_object_id__].[florida_A1BD9891F6974AC3B1A87CA8499CB54E]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='georgia' datatype='table' name='[__tableau_internal_object_id__].[georgia_2ACE5A2842ED48DABDF396297CACD9BD]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='golf' datatype='table' name='[__tableau_internal_object_id__].[golf_631CB0DEAE1D4BA683C1F96807D42D9E]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='ohio' datatype='table' name='[__tableau_internal_object_id__].[ohio_FE302CA7C21C40E3B89DA73232E77855]' role='measure' type='quantitative' />
+      <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+      <column caption='Hole Par' datatype='integer' name='[hole_par]' role='measure' type='quantitative' />
+      <column caption='Made Cut' datatype='integer' name='[made_cut]' role='measure' type='quantitative' />
+      <column caption='N Rounds' datatype='integer' name='[n_rounds]' role='measure' type='quantitative' />
+      <column caption='Player' datatype='string' name='[player]' role='dimension' type='nominal' />
+      <column caption='Pos' datatype='string' name='[pos]' role='dimension' type='nominal' />
+      <column caption='Season' datatype='integer' name='[season]' role='measure' type='quantitative' />
+      <column caption='Sg App' datatype='real' name='[sg_app]' role='measure' type='quantitative' />
+      <column caption='Sg Arg' datatype='real' name='[sg_arg]' role='measure' type='quantitative' />
+      <column caption='Sg Ott' datatype='real' name='[sg_ott]' role='measure' type='quantitative' />
+      <column caption='Sg Putt' datatype='real' name='[sg_putt]' role='measure' type='quantitative' />
+      <column caption='Sg T2G' datatype='real' name='[sg_t2g]' role='measure' type='quantitative' />
+      <column caption='Sg Total' datatype='real' name='[sg_total]' role='measure' type='quantitative' />
+      <column caption='Strokes' datatype='integer' name='[strokes]' role='measure' type='quantitative' />
+      <column caption='Tournament Name' datatype='string' name='[tournament_name]' role='dimension' type='nominal' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='NAME' />
+        <field-sort-custom-order field='DATE' />
+        <field-sort-custom-order field='AWND' />
+        <field-sort-custom-order field='PRCP' />
+        <field-sort-custom-order field='TMAX' />
+        <field-sort-custom-order field='TMIN' />
+        <field-sort-custom-order field='WSF2' />
+        <field-sort-custom-order field='WSF5' />
+      </field-sort-info>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='florida' id='florida_A1BD9891F6974AC3B1A87CA8499CB54E'>
+            <properties context=''>
+              <relation connection='postgres.0pq02o118wgtna1begk3p0rdh0s7' name='florida' table='[public].[florida]' type='table' />
+            </properties>
+          </object>
+          <object caption='georgia' id='georgia_2ACE5A2842ED48DABDF396297CACD9BD'>
+            <properties context=''>
+              <relation connection='postgres.0pq02o118wgtna1begk3p0rdh0s7' name='georgia' table='[public].[georgia]' type='table' />
+            </properties>
+          </object>
+          <object caption='golf' id='golf_631CB0DEAE1D4BA683C1F96807D42D9E'>
+            <properties context=''>
+              <relation connection='postgres.0pq02o118wgtna1begk3p0rdh0s7' name='golf' table='[public].[golf]' type='table' />
+            </properties>
+          </object>
+          <object caption='ohio' id='ohio_FE302CA7C21C40E3B89DA73232E77855'>
+            <properties context=''>
+              <relation connection='postgres.0pq02o118wgtna1begk3p0rdh0s7' name='ohio' table='[public].[ohio]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[date]' />
+              <expression op='[DATE (florida)]' />
+            </expression>
+            <first-end-point object-id='golf_631CB0DEAE1D4BA683C1F96807D42D9E' />
+            <second-end-point object-id='florida_A1BD9891F6974AC3B1A87CA8499CB54E' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[date]' />
+              <expression op='[DATE]' />
+            </expression>
+            <first-end-point object-id='golf_631CB0DEAE1D4BA683C1F96807D42D9E' />
+            <second-end-point object-id='georgia_2ACE5A2842ED48DABDF396297CACD9BD' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[date]' />
+              <expression op='[DATE (ohio)]' />
+            </expression>
+            <first-end-point object-id='golf_631CB0DEAE1D4BA683C1F96807D42D9E' />
+            <second-end-point object-id='ohio_FE302CA7C21C40E3B89DA73232E77855' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Masters'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='golf+ (capstone)' name='federated.1yd3a9z0h24e541dfstp81mtdimy' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1yd3a9z0h24e541dfstp81mtdimy'>
+            <column caption='Awnd' datatype='real' name='[AWND]' role='measure' type='quantitative' />
+            <column caption='strokes per round' datatype='real' name='[Calculation_1407093447929278465]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='AVG([strokes])/ AVG([n_rounds])' />
+            </column>
+            <column caption='Tmax' datatype='integer' name='[TMAX]' role='measure' type='quantitative' />
+            <column caption='Wsf5' datatype='real' name='[WSF5]' role='measure' type='quantitative' />
+            <column-instance column='[AWND]' derivation='Avg' name='[avg:AWND:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[TMAX]' derivation='Avg' name='[avg:TMAX:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[WSF5]' derivation='Avg' name='[avg:WSF5:qk]' pivot='key' type='quantitative' />
+            <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+            <column caption='N Rounds' datatype='integer' name='[n_rounds]' role='measure' type='quantitative' />
+            <column-instance column='[tournament_name]' derivation='None' name='[none:tournament_name:nk]' pivot='key' type='nominal' />
+            <column caption='Strokes' datatype='integer' name='[strokes]' role='measure' type='quantitative' />
+            <column caption='Tournament Name' datatype='string' name='[tournament_name]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_1407093447929278465]' derivation='User' name='[usr:Calculation_1407093447929278465:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[date]' derivation='Year' name='[yr:date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1yd3a9z0h24e541dfstp81mtdimy].[none:tournament_name:nk]'>
+            <groupfilter function='member' level='[none:tournament_name:nk]' member='&quot;Masters Tournament&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1yd3a9z0h24e541dfstp81mtdimy].[none:tournament_name:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1yd3a9z0h24e541dfstp81mtdimy].[usr:Calculation_1407093447929278465:qk]' field-type='quantitative' max='80.0' min='68.0' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='5' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1yd3a9z0h24e541dfstp81mtdimy].[usr:Calculation_1407093447929278465:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.93353593349456787' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='6' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1yd3a9z0h24e541dfstp81mtdimy].[avg:AWND:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='7' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1yd3a9z0h24e541dfstp81mtdimy].[avg:TMAX:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='8' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1yd3a9z0h24e541dfstp81mtdimy].[avg:WSF5:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1yd3a9z0h24e541dfstp81mtdimy].[usr:Calculation_1407093447929278465:qk] + ([federated.1yd3a9z0h24e541dfstp81mtdimy].[avg:AWND:qk] + ([federated.1yd3a9z0h24e541dfstp81mtdimy].[avg:TMAX:qk] + [federated.1yd3a9z0h24e541dfstp81mtdimy].[avg:WSF5:qk])))</rows>
+        <cols>[federated.1yd3a9z0h24e541dfstp81mtdimy].[yr:date:ok]</cols>
+      </table>
+      <simple-id uuid='{B9640A6C-5434-4F53-9214-0B166A60BDAD}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Masters'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <selection-collection>
+          <node-selection select-tuples='false'>
+            <oriented-node-reference orientation='vertical'>
+              <node-reference>
+                <axis>[federated.1yd3a9z0h24e541dfstp81mtdimy].[usr:Calculation_1407093447929278465:qk]</axis>
+              </node-reference>
+              <page-reference />
+            </oriented-node-reference>
+          </node-selection>
+        </selection-collection>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1yd3a9z0h24e541dfstp81mtdimy].[none:tournament_name:nk]</field>
+            <field>[federated.1yd3a9z0h24e541dfstp81mtdimy].[yr:date:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{296ED78F-F6E4-4641-B36D-B51E222FA7B0}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Masters' width='192'>
+      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
+      5IwKAgmLIQAAAABJRU5ErkJggg==
+    </thumbnail>
+  </thumbnails>
+</workbook>
