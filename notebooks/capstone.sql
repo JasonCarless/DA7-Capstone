@@ -137,3 +137,31 @@ with wind as (select "AWND", "DATE",
     group by golf.date, tournament_name, wind, max, min, gust
     order by wind desc;
                     
+with rain as (select "PRCP", "DATE",
+                 avg("PRCP") OVER(ORDER by "DATE" Rows between 3 preceding and current row)
+                 as average_rain
+                 from florida),
+             
+     max_temp as (select "TMAX", "DATE",
+                 avg("TMAX") OVER(ORDER by "DATE" Rows between 3 preceding and current row)
+                 as average_max
+                 from florida),
+               
+     min_temp as (select "TMIN", "DATE",
+                 avg("TMIN") OVER(ORDER by "DATE" Rows between 3 preceding and current row)
+                 as average_min
+                 from florida)
+                 
+                 
+    select avg(strokes/n_rounds), golf.date, round(average_rain,2)as rain, round(average_max,2) as max, round(average_min,2) as min, tournament_name
+    from golf
+    inner join rain 
+    on golf.date = rain."DATE"
+    inner join max_temp
+    on golf.date = max_temp."DATE"
+    inner join min_temp 
+    on golf.date = min_temp."DATE"
+    where tournament_name like '%Players%'
+    group by golf.date, tournament_name, rain, max, min 
+    order by rain desc;
+    
